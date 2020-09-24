@@ -27,7 +27,7 @@ $(document).ready(function(){
         var timeDiv = $(time[i]);
         var militTime = timeDiv.attr("id");
         var currentToDoDiv = timeDiv.children("textarea");
-        var currentToDoObject = localStorage.getItem("hour-" + militTime);
+        var currentToDoObject = JSON.parse(localStorage.getItem("hour-" + militTime));
         
         toDo[i] = currentToDoObject;
         
