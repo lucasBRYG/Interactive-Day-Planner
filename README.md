@@ -19,3 +19,7 @@ THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist
 ```
+
+
+# Try It Out!
+https://lucasbryg.github.io/Interactive-Day-Planner/
