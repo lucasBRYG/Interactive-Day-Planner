@@ -27,7 +27,7 @@ $(document).ready(function(){
         var timeDiv = $(time[i]);
         var militTime = timeDiv.attr("id");
 
-        
+        toDo.push(JSON.parse(localStorage.getItem("hour-" + militTime)));
         var currentToDoDiv = timeDiv.children("textarea");
         var currentToDoObject = localStorage.getItem("hour-" + militTime);
         currentToDoDiv.text(currentToDoObject.task);
@@ -41,12 +41,15 @@ $(document).ready(function(){
             timeDiv.addClass("future").removeClass("past present");
         }
     }
+
+    schedule.find("button").on("click", function(){
+        var currentToDoDiv = $(this).parent();
+        var taskUpdate = currentToDoDiv.find("textarea").val().trim();
+        
+        
+    });
 });
 
-schedule.find("button").on("click", function(){
-    var currentToDoDiv = $(this).parent();
-    console.log(currentToDoDiv);
-    // var taskUpdate = $(this).parent().find("textarea").
-});
+
 
 
